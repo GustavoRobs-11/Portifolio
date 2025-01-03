@@ -123,5 +123,5 @@ const mapearTeclado = (evento) =>{
 document.addEventListener('keydown', mapearTeclado);
 
 function home(){
-    window.location.href = "/landingPage.html";
+    window.location.href = "/index.html";
 }
