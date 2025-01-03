@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculadora</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/calculadora/calculadora.css">
     
 </head>
-<nav>
-    <a href="landingPage.html">aaaa</a>
-</nav>
 <body>
-    <div class="calculator">
-        <div class="display" id="display"></div>
+    <nav>
+        <button class="home" onclick="home()">Home</button>
+    </nav>
+    <main>
+        <div class="calculator">
+            <div class="display" id="display"></div>
         <div class="buttons">
         <button id="limparDisplay">CE</button>
         <button id="limparCalculo">C</button>
@@ -34,9 +35,10 @@
         <button id="tecla0">0</button>
         <button id="decimal">,</button>
         <button id="igual">=</button>
+            </div>
         </div>
-    </div>
-    <img src="um cara tranquilo.png" alt="">
-    <script src="index.js"></script>
+    </main>
+    
+    <script src="/calculadora/calculadora.js"></script>
 </body>
 </html>
