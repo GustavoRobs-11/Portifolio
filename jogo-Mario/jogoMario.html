@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game is Mario</title>
+    <script src="/jogo-Mario/jogoMario.js" defer></script>
+    <link rel="stylesheet" href="/jogo-Mario/jogoMario.css">
+</head>
+<body>
+    <div class="game-board">
+        <img src="/jogo-Mario/imgsMario/pipe.png" class="pipe" id="pipe">
+        <img src="/jogo-Mario/imgsMario/mario.gif" class="mario">
+        <img src="/jogo-Mario/imgsMario/clouds.png" class="clouds">
+    </div>
+    <div class="botoes">
+        <button class="restart" id="restartButton" style="display:none;">RESTART</button>
+        <button class="restart" id="startButton">START</button>
+        <button onclick="home()" class="home">HOME</button>
+    </div>
+    <p id = "score" class="display">0</p>
+    </div>
+</body>
+</html>

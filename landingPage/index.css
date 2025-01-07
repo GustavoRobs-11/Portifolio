@@ -24,8 +24,8 @@ header{
 }
 main{
     display: flex;
-    padding-left: 10%;
     padding-top: 5%;
+    justify-content: center;
 }
 
 
@@ -58,4 +58,11 @@ button:hover{
     color: rgb(0, 0, 0);
     font-size: 30px;
 
+}
+.projetos{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items:center ;
 }
