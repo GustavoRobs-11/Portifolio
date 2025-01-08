@@ -8,13 +8,29 @@ const startButton = document.getElementById('startButton');
 const restartButton = document.getElementById('restartButton');
 const pipe = document.getElementById('pipe')
 const mario = document.querySelector('.mario');
+let perdeu = false;
+let score = 0;
+let intervalo;
+
 // Função que inicia o jogo
 function startGame(){
     pipe.style.animation = ('pipe-animation 2s infinite linear');
+    score = 0;
+    perdeu = false;
+
+    document.getElementById("score").textContent = "Pontuação: 0";
+
+    intervalo = setInterval(function(){
+        if (!perdeu){
+            score+= 1;
+            document.getElementById("score").textContent = `Pontuação: ${score}`;
+        }else{
+            clearInterval(intervalo);
+            document.getElementById("score").textContent = `Você perdeu! Seu score é  ${score}`;
+        }
+    }, 1000)    
     validacao(); // Chama a função de validação
 }
-
-// Função para o pulo do Mario
 var jump = () => {
     mario.classList.add('jump'); // Adiciona a classe de pulo
     setTimeout(() => {
@@ -22,14 +38,10 @@ var jump = () => {
     }, 400);
 };
 document.addEventListener('keydown', jump); // Evento para detectar quando a tecla é pressionada
- // Variável para verificar se houve colisão
-
-// Função de validação que verifica colisões
 function validacao(){
 
     var pipe = document.querySelector('.pipe');
     var mario = document.querySelector('.mario');
-        
     
         loop = setInterval(() => {
             var pipePosition = pipe.offsetLeft;
@@ -45,6 +57,9 @@ function validacao(){
                 mario.src = '/jogo-Mario/imgsMario/game-over.png'; // Troca a imagem do Mario para "game over"
                 mario.style.width = '75px'; // Reduz a largura do Mario
                 mario.style.marginLeft = '50px'; // Move o Mario para o lado
+
+                perdeu = true
+
                 clearInterval(loop); // Interrompe o loop de colisão
             }
             
@@ -63,22 +78,17 @@ function voltaMario(){
     mario.src = '/jogo-Mario/imgsMario/mario.gif';
     mario.style.width = '150px';
 }
-
 // Função que reinicia o jogo
 function restartGame(){
     voltaPipe();
     voltaMario();
     startGame(); // Reinicia o jogo chamando a função startGame
-
 }
-
 startButton.addEventListener('click', () => { 
     startButton.style.display = 'none'; // Esconde o botão de iniciar
     restartButton.style.display = 'inline-block'; // Mostra o botão de reiniciar
     startGame(); // Inicia o jogo
 });
-
-// Função para reiniciar o jogo
 restartButton.addEventListener('click', () => {
     restartButton.style.display = 'none'; // Esconde o botão de reiniciar
     startButton.style.display = 'inline-block'; // Mostra o botão de iniciar
