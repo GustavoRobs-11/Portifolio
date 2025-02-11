@@ -4,3 +4,9 @@ function calculadora(){
 function mario(){
     window.location.href = "/jogo-Mario/jogoMario.html"
 }
+function linkedin(){
+    
+}
+function github(){
+    window.open("https://github.com/GustavoRobs-11");
+}
