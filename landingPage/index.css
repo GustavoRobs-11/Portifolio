@@ -7,31 +7,29 @@ header{
     align-items: center;
     justify-content: space-around;
     padding-top: 10px;
-    background-color: rgba(255, 255, 255, 0.307);
+    background-color:  rgba(1, 1, 10, 0.455);
     border-radius:100px;
     padding-bottom: 10px;
     box-shadow: 0 60px 100px #240047;
     width: 100%;
     height: 150px;
-    border: 1px solid aliceblue;
+    border: 3px solid aliceblue;
 }
 
 .logo{
     width: 120px;
     padding: 10px;
     border-radius: 120px;
-}
-.logo:hover{
+    filter: drop-shadow(0 0px 10px #ffffff);
     cursor: pointer;
-    width: 125px;
-    animation: logo 1000ms;
-    filter: drop-shadow(0 30px 50px #240047);
+    animation: logo 5000ms infinite;
 }
 @keyframes logo{
-    from{
-        rotate: 0deg;
-    }to{
-        rotate: 360deg;
+    0%, 100%{
+        transform:scale(1);
+    }
+    50%{
+        transform: scale(1.2);
     }
 }
 
@@ -75,11 +73,12 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #240047;
+    background-color:  rgba(1, 1, 10, 0.455);
     border-radius: 45px;
     padding: 20px;
     color: rgb(255, 255, 255);
     font-size: 30px;
+    border: 3px solid white;
 
 }
 .projetos{
@@ -92,13 +91,17 @@ main{
 .eu{
     width: 50%;
     border-radius: 100%;
-    animation: eu 1000ms infinite;
+    animation: eu 5000ms infinite;
+    background-color: rgba(1, 1, 10, 0.455);
+    border-color: #240047;
+    border: 5px solid white ;
 }
 @keyframes eu{
-    from{
-        
-    }to{
-        
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.02);
     }
 }
 #background-video {
@@ -109,18 +112,24 @@ main{
     height: 100%;
     object-fit: cover;  /* Faz o vídeo cobrir toda a área da tela sem distorção */
     z-index: -1;  /* Coloca o vídeo atrás de outros elementos da página */
+    opacity: 30%;
 }
 .logo-github{
     width: 100px;
+    animation: logo 5000ms infinite;
+    filter: drop-shadow(0 0px 10px #ffffff);
 }
 .logo-linkedin{
     width: 100px;
+    animation: logo 5000ms infinite;
+    filter: drop-shadow(0 0px 10px #ffffff);
 }
 .container-quemsou{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    background-color: rgba(35, 0, 71, 0.755);
+    background-color:  rgba(1, 1, 10, 0.455);
     color: white;
     padding-inline: 5%;
     padding-block: 5%;
@@ -135,5 +144,8 @@ main{
     gap: 5%;
 }
 .tittle-quemsou{
-    font-size: 50px;
+    font-size: 4vw;
+}
+.texto-quemsou{
+    font-size: 1.5vw;
 }
