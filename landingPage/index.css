@@ -1,5 +1,5 @@
 body{
-    background-color: #01010a;
+    background: #001f3f ;
     font-family: "Poppins", serif;
 }
 header{
@@ -7,7 +7,7 @@ header{
     align-items: center;
     justify-content: space-around;
     padding-top: 10px;
-    background-color:  rgba(1, 1, 10, 0.455);
+    background-color:  #001f3f;
     border-radius:100px;
     padding-bottom: 10px;
     box-shadow: 0 60px 100px #240047;
@@ -73,10 +73,10 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color:  rgba(1, 1, 10, 0.455);
+    background: #001f3f ;
     border-radius: 45px;
     padding: 20px;
-    color: rgb(255, 255, 255);
+    color: #ffc857;
     font-size: 30px;
     border: 3px solid white;
 
@@ -88,14 +88,56 @@ main{
     justify-content: center;
     align-items:center ;
 }
-.eu{
-    width: 50%;
-    border-radius: 100%;
-    animation: eu 5000ms infinite;
-    background-color: rgba(1, 1, 10, 0.455);
-    border-color: #240047;
-    border: 5px solid white ;
+.box-eu{
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
 }
+.box-eu::before,
+.box-eu::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(3deg, rgba(0, 0, 248, 0),#ffc857);
+    background-size: 450%;
+    border-radius: 50%;
+    width: calc(100% + 9px);
+    height: calc(100% + 9px);
+    z-index: -1;
+    animation: bordas 1s ease-in-out infinite;
+}
+.box-eu::after{
+    filter: blur(7px);
+}
+@keyframes bordas{
+    0%{
+        transform: rotate(45deg)
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.foto-eu{
+    position: relative;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: #001f3f ;
+}
+
+
 @keyframes eu{
     0%, 100%{
         transform: scale(1);
@@ -112,7 +154,7 @@ main{
     height: 100%;
     object-fit: cover;  /* Faz o vídeo cobrir toda a área da tela sem distorção */
     z-index: -1;  /* Coloca o vídeo atrás de outros elementos da página */
-    opacity: 30%;
+    opacity: 20%;
 }
 .logo-github{
     width: 100px;
@@ -129,12 +171,13 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color:  rgba(1, 1, 10, 0.455);
+    background: #001f3f ;
     color: white;
     padding-inline: 5%;
     padding-block: 5%;
     border: 2px solid white;
     border-radius: 15px;
+    width: 50%;
 }
 .section-container{
     display: flex;
