@@ -243,6 +243,7 @@ main{
 .button-projetos:hover{
     background-color: var(--primary-color);
     cursor: pointer;
-    color: #01010a;
+    color: #ffffff;
     scale: 1.08;
+    border:3px solid var(--details-color) ;
 }
