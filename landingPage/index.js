@@ -16,3 +16,9 @@ function mind(){
 function codeMind(){
     window.open("https://github.com/Mind-your/Mind_Entrega_1_Semestre");
 }
+function Mytube(){
+    window.open("https://gustavorobs-11.github.io/MyTube_Alice-Gustavo/");
+}
+function CodeMytube(){
+    window.open("https://github.com/GustavoRobs-11/MyTube_Alice-Gustavo");
+}
