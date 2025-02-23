@@ -22,3 +22,8 @@ function Mytube(){
 function CodeMytube(){
     window.open("https://github.com/GustavoRobs-11/MyTube_Alice-Gustavo");
 }
+let card = document.getElementsByClassName(".card");
+function nextBtn(){
+    card.style.position = "relative";
+    card.style.left = "400px";
+}
