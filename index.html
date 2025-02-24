@@ -19,6 +19,7 @@
             <li>Meus projetos</li>
             <li>Contato</li>
             <li>Skills</li>
+            <li>Sobre mim</li>
         </div>
         <div class="menu-hamburguer">
             <div class="bar1"></div>
@@ -28,7 +29,17 @@
 
     </header>
     <main>
-        <section class="section-container">
+        <section class="section-start">
+        <div class="card-start">
+            <h1 data-text="Desenvolvedor" class="dev-start">Desenvolvedor</h1>
+            <h2 data-text="Front-End" class="front-start">Front-End</h2>
+            <p data-text="Localizado em São Bernardo do Campo | SP" class="localizado-start">Localizado em São Bernardo do Campo | SP</p>
+        </div>
+        <div class="box-eu">
+                <img src="/imgs/foto eu.PNG" class="foto-eu">
+        </div>
+        
+        </section>
         <div class="container-quemsou">
             <h1 class="tittle-quemsou">Quem sou eu?</h1>
             <p class="texto-quemsou">Sou um entusiasta da tecnologia e da inovação, sempre em busca de novos aprendizados no desenvolvimento de software, com foco em soluções multiplataformas. Durante minha trajetória acadêmica na FATEC, tenho aprimorado minhas habilidades em linguagens como Java, Python, HTML, CSS e SQL, além de aprofundar meus conhecimentos em engenharia de software e bancos de dados.</p>
@@ -42,10 +53,6 @@
                 <i class="fa-brands fa-github"></i>
             </div>
         </div>
-        <div class="box-eu">
-                <img src="/imgs/foto eu.PNG" class="foto-eu">
-        </div>
-        </section>
         <div class="cards-container">
             <h1>MEUS PROJETOS</h1>
             <div class="projetos">
@@ -103,19 +110,24 @@
                 </div>
             </div>
             <div class="button-slide">
-                <button class="arrow prev">voltar</button>
-                <button class="arrow next" onclick="nextBtn()">next</button>
+                <button class="btn-voltar">voltar</button>
+                <button class="btn-avancar" onclick="nextBtn()">proximo</button>
             </div>
         </div>
         <section class="container-contato">
-            <div class="dados">
-                <input class="inputs1" type="name" placeholder="Nome">
-                <input class="inputs1" type="email" placeholder="gustavo.@gmail.com">
-                <input class="inputs1" type="tel" placeholder="(11) 9 9999-9999">
-                <input class="inputs1" type="text" placeholder="Assunto">
+            <div class="container-title-contato">
+                <h1 class="entre-em-contato">ENTRE EM CONTATO</h1>
             </div>
-            <div class="mensagem">
-                <input class="inputs1" type="text" placeholder="Mensagem">
+            <div class="inputs-contato">
+                <div class="dados">
+                    <input class="inputs1" type="name" placeholder="Nome">
+                    <input class="inputs1" type="email" placeholder="gustavo.@gmail.com">
+                    <input class="inputs1" type="tel" placeholder="(11) 9 9999-9999">
+                    <input class="inputs1" type="text" placeholder="Assunto">
+                </div>
+                <div class="mensagem">
+                    <input class="inputs1" type="text" placeholder="Mensagem">
+                </div>
             </div>
             <div class="button-message">
                 <button class="send-message">Send Message</button>
