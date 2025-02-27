@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    </video>
     <header>
         <h1 data-text="Gustavo" class="header-name">Gustavo</h1>
         <div class="header-menu">
@@ -44,13 +43,8 @@
             <h1 class="tittle-quemsou">Quem sou eu?</h1>
             <p class="texto-quemsou">Sou um entusiasta da tecnologia e da inovação, sempre em busca de novos aprendizados no desenvolvimento de software, com foco em soluções multiplataformas. Durante minha trajetória acadêmica na FATEC, tenho aprimorado minhas habilidades em linguagens como Java, Python, HTML, CSS e SQL, além de aprofundar meus conhecimentos em engenharia de software e bancos de dados.</p>
             <div class="redes-sociais">
-                <a href="https://github.com/GustavoRobs-11" target="_blank">
                 <img src="/imgs/logo-github.png" class="logo-github">
-                </a>
-                <a href="https://www.linkedin.com/in/gustavo-robson1404/" target="_blank"><!-- target... são para abrir a pagina em outra aba-->
                 <img src="/imgs/logo-linkedin.png" class="logo-linkedin">
-                </a>
-                <i class="fa-brands fa-github"></i>
             </div>
         </div>
         <div class="cards-container">
@@ -110,10 +104,38 @@
                 </div>
             </div>
             <div class="button-slide">
-                <button class="btn-voltar">voltar</button>
+                <!-- <button class="btn-voltar" style="display: none;">voltar</button> -->
                 <button class="btn-avancar" onclick="nextBtn()">proximo</button>
             </div>
         </div>
+        <section class="container-skills">
+            <h1 class="tittle-container-skills">SKILLS</h1>
+            <div class="skills">
+                <div class="card-skills">
+                    <h1 class="card-tittle-skills">Front-End</h1>
+                    <img src="/imgs/card1-skills.png" class="card-img-skills">
+                    <div class="card-language-skills">
+                        <h4 class="language-skills">HTML</h4>
+                        <h4 class="language-skills">CSS</h4>
+                        <h4 class="language-skills">JavaScript</h4>
+                    </div>
+                </div>
+                <div class="card-skills">
+                    <h1 class="card-tittle-skills">Linguagens</h1>
+                    <img src="/imgs/card2-skills.png" class="card-img-skills">
+                    <div class="card-language-skills">
+                        <h4 class="language-skills">Java</h4>
+                        <h4 class="language-skills">Python</h4>               </div>
+                </div>
+                <div class="card-skills">
+                        <h1 class="card-tittle-skills">Banco de Dados</h1>
+                        <img src="/imgs/card3-skills.png" class="card-img-skills">
+                    <div class="card-language-skills">
+                        <h4 class="language-skills">SQL</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="container-contato">
             <div class="container-title-contato">
                 <h1 class="entre-em-contato">ENTRE EM CONTATO</h1>
@@ -133,12 +155,22 @@
                 <button class="send-message">Send Message</button>
             </div>
         </section>
+        
 
 
     </main>
-    <footer>
-
-
+    <footer class="container-footer">
+        <div  class="copy-footer">
+            <nav class="links-footer">
+                <a href="#home" class="link-footer">Home</a>
+                <a href="#sobre" class="link-footer">Sobre</a>
+                <a href="#projetos" class="link-footer">Projetos</a>
+                <a href="#contato" class="link-footer">Contato</a>
+            </nav>
+            <p>&copy; 2025 Gustavo Robson.</p>
+            <div class="links">
+            </div>
+        </div>
     </footer>
 </body>
 </html>
