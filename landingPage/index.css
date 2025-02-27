@@ -133,8 +133,8 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: var(--details-color) ;
-    color: var(--primary-color);
+    background: linear-gradient(var(--primary-color), var(--details-color)) ;
+    color: var(-);
     padding-inline: 5%;
     padding-block: 5%;
 }
@@ -267,7 +267,7 @@ main{
 }
 .localizado-start{
     position: absolute;
-    -webkit-text-stroke: 0.1rem var(--primary-color);
+    -webkit-text-stroke: 0.05rem var(--primary-color);
     left: 3.5rem;
     top: 22rem;
     font-family: var(--font-family);
@@ -276,6 +276,7 @@ main{
     white-space: nowrap;
     overflow: hidden;
     padding-right: 1rem;
+    font-weight: bold;
 }
 .localizado-start::after{
     content: attr(data-text);
@@ -289,6 +290,7 @@ main{
     overflow: hidden;
     animation: digitando-front 2s steps(calc(35)) forwards, blink 200ms infinite;
     border-right: 4px solid var(--details-color);
+    font-weight: bold;
 }
 
 
@@ -321,7 +323,7 @@ main{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(var(--secondary-color), var(--details-color));
+    background: linear-gradient(var(--details-color), var(--secondary-color), var(--details-color));
     padding: 20px;
     color: var(--primary-color);
     font-size: 30px;
