@@ -27,3 +27,9 @@ function nextBtn(){
     card.style.position = "relative";
     card.style.left = "400px";
 }
+function Github(){
+    window.open("https://github.com/GustavoRobs-11");
+}
+function Linkedin(){
+    window.open("https://www.linkedin.com/in/gustavo-rss/");
+}

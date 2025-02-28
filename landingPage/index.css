@@ -123,10 +123,18 @@ main{
     animation: logo 5000ms infinite;
     filter: drop-shadow(0 0 10px var(--primary-color));
 }
+.logo-github:hover{
+    translate: 0 -1rem;
+    cursor: pointer;
+}
 .logo-linkedin{
     width: 5%;
     animation: logo 5000ms infinite;
     filter: drop-shadow(0 0 10px var(--primary-color));
+}
+.logo-linkedin:hover{
+    translate: 0 -1rem;
+    cursor: pointer;
 }
 .container-quemsou{
     display: flex;
