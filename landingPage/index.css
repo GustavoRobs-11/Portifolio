@@ -118,11 +118,7 @@ main{
         transform: scale(1.02);
     }
 }
-.menu-hamburguer{
-    display: none;
-    cursor: pointer;
-    border-bottom: 1;
-}
+
 .logo-github{
     width: 5%;
     animation: logo 5000ms infinite;
@@ -306,13 +302,31 @@ main{
     border-right: 4px solid var(--details-color);
     font-weight: bold;
 }
-.bar1{
+.bar1, .bar2, .bar3{
     background-color: var(--primary-color);
     width: 2rem;
     height: 0.3rem;
-    margin: 0.4rem 0;
-    transition: 0.3 ease;
+    margin: 0.3rem;
+    transition: 0.3s ease;
 }
+.change .bar1{
+    transform: translate(0, 0.65rem) rotate(-45deg);
+}
+.change .bar2{
+    opacity: 0;
+}
+.change .bar3{
+    transform: translate(0, -0.65rem) rotate(45deg);
+}
+.menu-hamburguer{
+    display: none;
+    cursor: pointer;
+    
+}
+.menu-hamburguer::c{
+   background: red;
+}
+
 .tittle-quemsou{
     font-size: 3vw;
 }
@@ -642,6 +656,29 @@ main{
     }
     .header-menu-responsive{
         display: none;
+        position: absolute;
+        top: 6%;
+        left: 0;
+        height: max-content;
+        padding: 1rem;
+        background-color: var(--secondary-color);
+        transition: 500ms;
+    }
+    .header-menu-responsive li{
+        list-style: none;
+        display: flex;
+        color:var(--primary-color);
+        font-family: var(--font-family);
+        font-size: 0.5rem;
+        font-weight: bold;
+        transition: 500ms;
+        padding: 0.3rem;
+        
+    }
+    .header-menu-responsive li:hover{
+        translate: 0 -0.3rem;
+        cursor: pointer;
+        border-bottom: 1.3px solid var(--primary-color);
     }
     .section-start{
         padding-top: 0;

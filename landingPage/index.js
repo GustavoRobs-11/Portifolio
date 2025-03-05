@@ -22,14 +22,24 @@ function Mytube(){
 function CodeMytube(){
     window.open("https://github.com/GustavoRobs-11/MyTube_Alice-Gustavo");
 }
-let card = document.getElementsByClassName(".card");
-function nextBtn(){
-    card.style.position = "relative";
-    card.style.left = "400px";
-}
 function Github(){
     window.open("https://github.com/GustavoRobs-11");
 }
 function Linkedin(){
     window.open("https://www.linkedin.com/in/gustavo-rss/");
+}
+const menuH = document.querySelector(".menu-hamburguer");
+menuH.addEventListener("click", () => {
+    toggleMenu()
+});
+function toggleMenu(){
+    const nav = document.querySelector(".header-menu-responsive");
+    menuH.classList.toggle('change');
+
+    if (menuH.classList.contains('change')){
+        nav.style.display = 'block';
+
+    } else{
+        nav.style.display = 'none';
+    }
 }
