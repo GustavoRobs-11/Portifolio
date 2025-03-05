@@ -29,7 +29,7 @@ header{
 .header-name{
     position: relative;
     color: var(--secondary-color);
-    -webkit-text-stroke: 0.05rem var(--primary-color);
+    -webkit-text-stroke: 0.5px var(--primary-color);
     text-transform: uppercase;
     font-size: 1.5rem;
     left: 1rem;
@@ -43,7 +43,7 @@ header{
     width: 100%;
     height: 100%;
     color: var(--primary-color);
-    -webkit-text-stroke: 0.05rem var(--primary-color);
+    -webkit-text-stroke: 0.5px var(--secondary-color);
     border-bottom: 0.2rem solid var(--primary-color);
     overflow: hidden;
     animation: animation 4s ease-in-out infinite;
@@ -118,6 +118,11 @@ main{
         transform: scale(1.02);
     }
 }
+.menu-hamburguer{
+    display: none;
+    cursor: pointer;
+    border-bottom: 1;
+}
 .logo-github{
     width: 5%;
     animation: logo 5000ms infinite;
@@ -126,6 +131,7 @@ main{
 .logo-github:hover{
     translate: 0 -1rem;
     cursor: pointer;
+    transition: 500ms;
 }
 .logo-linkedin{
     width: 5%;
@@ -135,6 +141,7 @@ main{
 .logo-linkedin:hover{
     translate: 0 -1rem;
     cursor: pointer;
+    transition: 500ms;
 }
 .container-quemsou{
     display: flex;
@@ -208,6 +215,7 @@ main{
 
 .card-start {
     position: relative;
+    width: 100%;
 }
 
 .dev-start{
@@ -244,14 +252,14 @@ main{
 
 .front-start{
     position: absolute;
-    -webkit-text-stroke: 0.1rem var(--primary-color);
-    left: 3rem;
-    top: 14rem;
+    left: 9rem;
+    top: 10rem;
     font-family: var(--font-family);
     color: var(--primary-color);
     font-size: 3vw;
-    white-space: nowrap;
     overflow: hidden;
+    white-space: nowrap;
+    width: 1;
 }
 .front-start::after{
     content: attr(data-text);
@@ -275,16 +283,14 @@ main{
 }
 .localizado-start{
     position: absolute;
-    -webkit-text-stroke: 0.05rem var(--primary-color);
-    left: 3.5rem;
-    top: 22rem;
+    left: 11rem;
+    top: 12rem;
     font-family: var(--font-family);
     color: var(--primary-color);
-    font-size: 1.5vw;
-    white-space: nowrap;
+    font-size: 2vw;
     overflow: hidden;
-    padding-right: 1rem;
-    font-weight: bold;
+    white-space: nowrap;
+    width: 1;
 }
 .localizado-start::after{
     content: attr(data-text);
@@ -300,10 +306,6 @@ main{
     border-right: 4px solid var(--details-color);
     font-weight: bold;
 }
-
-
-
-
 .bar1{
     background-color: var(--primary-color);
     width: 2rem;
@@ -311,16 +313,8 @@ main{
     margin: 0.4rem 0;
     transition: 0.3 ease;
 }
-
-.menu-hamburguer{
-    display: none;
-    cursor: pointer;
-    border-bottom: 1;
-}
-
 .tittle-quemsou{
     font-size: 3vw;
-    
 }
 .texto-quemsou{
     font-size: 1.5rem;
@@ -555,13 +549,13 @@ main{
     flex-direction: row;
     gap: 10rem;
     padding-top: 5rem;
+    
 }
 .card-skills{
     display: flex;
     flex-direction: column;
     padding: 1rem;
     background: var(--primary-color);
-    
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -629,4 +623,373 @@ main{
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
+}
+/* extra small smartphone */
+@media (min-width: 0px){
+    .menu-hamburguer{
+        display: block;
+    }
+    .header-menu{
+        display: none;
+    }
+    header{
+        padding-left: 0;
+        padding: 0.5rem;
+    }
+    .header-name{
+        left: 0.5rem;
+        font-size: 1rem;
+    }
+    .header-menu-responsive{
+        display: none;
+    }
+    .section-start{
+        padding-top: 0;
+        padding-bottom: 7rem;
+    }
+    .dev-start{
+        font-size: 6vw;
+        left: -1rem;
+    }
+    .front-start{
+        font-size: 5vw;
+        left: 4rem;
+        top: 8rem;
+    }
+    .localizado-start{
+        font-size: 2.5vw;
+        left: 6rem;
+        top: 13rem;
+        padding-inline: 0.5rem;
+    }
+    .box-eu{
+        align-content: center;
+        
+    }
+    .box-eu:hover:before,
+    .box-eu:hover:after{
+        width: calc(100% + 0.2rem);
+        height: calc(100% + 0.2rem);
+        right: 0;
+    }
+    .box-eu::before,
+    .box-eu::after{
+        width: calc(100% + 0.2rem);
+        height: calc(100% + 0.2rem);
+        right: 0;
+    }
+
+    .foto-eu{
+        width: 100%;
+        right: 0;
+        top: 15%;
+    }
+    .container-quemsou{
+        padding-top: 5rem;
+    }
+    .tittle-quemsou{
+        font-size: 8vw;
+    }
+    .texto-quemsou{
+        font-size: 4vw;
+    }
+    .redes-sociais{
+        width: 100%;
+        padding-top: 1rem;
+    }
+    .logo-github{
+        width: 15%;
+    }
+    .logo-linkedin{
+        width: 15%;
+    }
+    .cards-container{
+        text-align: center;
+    }
+    .card{
+        padding: 0;
+    }
+    .card-img{
+        width: 80%;
+    }
+    .button-projetos{
+        font-size: 1.5rem;
+    }
+    .card-language{
+        font-size: 6vw;
+    }
+    .skills{
+        gap: 1rem;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .card-img-skills{
+        display: none;
+    }
+    .card-skills{
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+    }
+    .card-tittle-skills{
+        font-size: 5vw;
+    }
+    .card-skills:hover{
+        translate: 0 -0.5rem;
+    }
+    .card-language-skills{
+        font-size: 2vw;
+    }
+    .container-contato{
+        display: flex;
+        text-align: center;
+    }
+    .inputs1::placeholder{
+        font-size: 3vw;
+    }
+}
+/* medium */
+@media (min-width: 576px){
+    .menu-hamburguer{
+        display: none;
+    }
+    .header-menu{
+        display: flex;
+        width: 100%;
+        justify-content: end;
+        position: static;
+    }
+    .header-menu li{
+        font-size: 2vw;
+        
+    }
+    header{
+        display: flex;
+        justify-content: end;
+    }
+    .header-name{
+        left: 0.5rem;
+    }
+    .header-menu-responsive{
+        display: none;
+    }
+    .section-start{
+        padding-top: 0;
+        padding-bottom: 7rem;
+    }
+    .dev-start{
+        font-size: 6vw;
+        left: -2rem;
+    }
+    .front-start{
+        font-size: 5vw;
+        left: 4rem;
+        top: 12rem;
+    }
+    .localizado-start{
+        font-size: 2.5vw;
+        left: 6rem;
+        top: 21rem;
+        padding-inline: 0.5rem;
+    }
+    .box-eu{
+        align-content: center;  
+    }
+    .box-eu:hover:before,
+    .box-eu:hover:after{
+        width: calc(80% + 0.2rem);
+        height: calc(100% + 0.2rem);
+        right: 0;
+    }
+    .box-eu::before,
+    .box-eu::after{
+        width: calc(80% + 0.2rem);
+        height: calc(100% + 0.2rem);
+        right: 0;
+    }
+    .foto-eu{
+        width: 80%;
+        right: 0;
+        top: 15%;
+    }
+    .container-quemsou{
+        padding-top: 5rem;
+    }
+    .tittle-quemsou{
+        font-size: 7vw;
+    }
+    .texto-quemsou{
+        font-size: 3vw;
+    }
+    .redes-sociais{
+        width: 100%;
+        padding-top: 1rem;
+    }
+    .logo-github{
+        width: 10%;
+    }
+    .logo-linkedin{
+        width: 10%;
+    }
+    .card{
+        width: 350px;
+    }
+    .card-language{
+        font-size: 3vw;
+    }
+    .button-projetos{
+        font-size: 1.5rem;
+    }
+    .card-skills{
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+    }
+    .card-skills:hover{
+        translate: 0 -0.5rem;
+    }
+    .card-img-skills{
+        display: none;
+    }
+    
+    .skills{
+        gap: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .container-contato{
+        display: flex;
+        text-align: center;
+    }
+    .inputs1::placeholder{
+        font-size: 3vw;
+    }
+}
+/* full */
+@media (min-width: 1200px){
+    .menu-hamburguer{
+        display: none;
+    }
+    .header-menu{
+        display: flex;
+        width: 100%;
+        justify-content: end;
+        position: static;
+    }
+    .header-menu li{
+        font-size: 2vw;
+    }
+    header{
+        display: flex;
+        justify-content: end;
+    }
+    .header-name{
+        left: 6rem;
+        font-size: 2vw;
+    }
+    .header-menu-responsive{
+        display: none;
+    }
+    .section-start{
+        padding-top: 0;
+        padding-bottom: 7rem;
+    }
+    .dev-start{
+        font-size: 6vw;
+        left: -2rem;
+    }
+    .front-start{
+        font-size: 5vw;
+        left: 6rem;
+        top: 16rem;
+    }
+    .localizado-start{
+        font-size: 2vw;
+        left: 8rem;
+        top: 28rem;
+        padding-inline: 0.5rem;
+    }
+    .box-eu{
+        align-content: center;  
+    }
+    .box-eu:hover:before,
+    .box-eu:hover:after{
+        width: calc(80% + 0.2rem);
+        height: calc(100% + 0.2rem);
+        right: 0;
+    }
+    .box-eu::before,
+    .box-eu::after{
+        width: calc(80% + 0.2rem);
+        height: calc(100% + 0.2rem);
+        right: 0;
+    }
+    .foto-eu{
+        width: 80%;
+        right: 0;
+        top: 15%;
+    }
+    .container-quemsou{
+        padding-top: 8rem;
+    }
+    .tittle-quemsou{
+        font-size: 5vw;
+    }
+    .texto-quemsou{
+        font-size: 2.5vw;
+    }
+    .redes-sociais{
+        width: 100%;
+        padding-top: 1rem;
+    }
+    .logo-github{
+        width: 5%;
+    }
+    .logo-linkedin{
+        width: 5%;
+    }
+    .card{
+        width: 40%;
+    }
+    .card-language{
+        font-size: 3vw;
+    }
+    .button-projetos{
+        font-size: 1.5rem;
+    }
+    .card-skills{
+        justify-content: space-between;
+        flex-direction: column;
+        width: 25%;
+    }
+    .card-skills:hover{
+        translate: 0 -0.5rem;
+    }
+    .card-img-skills{
+        display: flex;
+        width: 20%;
+    }
+    .card-tittle-skills{
+        font-size: 4vw;
+        text-align: center;
+    }
+    .language-skills{
+        font-size: 1.5vw;
+    }
+    .skills{
+        gap: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .container-contato{
+        display: flex;
+        text-align: center;
+    }
+    .inputs1::placeholder{
+        font-size: 2vw;
+    }
 }
