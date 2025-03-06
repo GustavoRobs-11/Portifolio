@@ -66,14 +66,18 @@ header{
 }
 .header-menu li{
     list-style: none;
+}
+.header-menu li a{
+    list-style: none;
     display: flex;
     color:var(--primary-color);
     font-family: var(--font-family);
     font-size: 1.5rem;
     font-weight: bold;
     transition: 500ms;
+    text-decoration: none;
 }
-.header-menu li:hover{
+.header-menu li a:hover{
     translate: 0 -0.3rem;
     cursor: pointer;
     border-bottom: 1.3px solid var(--primary-color);
@@ -665,7 +669,10 @@ main{
         transition: 500ms;
     }
     .header-menu-responsive li{
+        text-decoration: none;
         list-style: none;
+    }
+    .header-menu-responsive li a{
         display: flex;
         color:var(--primary-color);
         font-family: var(--font-family);
@@ -673,9 +680,8 @@ main{
         font-weight: bold;
         transition: 500ms;
         padding: 0.3rem;
-        
     }
-    .header-menu-responsive li:hover{
+    .header-menu-responsive li a:hover{
         translate: 0 -0.3rem;
         cursor: pointer;
         border-bottom: 1.3px solid var(--primary-color);
@@ -936,16 +942,17 @@ main{
     .dev-start{
         font-size: 6vw;
         left: -2rem;
+        top: 1rem;
     }
     .front-start{
         font-size: 5vw;
         left: 6rem;
-        top: 16rem;
+        top: 10rem;
     }
     .localizado-start{
         font-size: 2vw;
         left: 8rem;
-        top: 28rem;
+        top: 20rem;
         padding-inline: 0.5rem;
     }
     .box-eu{

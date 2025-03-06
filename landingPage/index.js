@@ -43,3 +43,7 @@ function toggleMenu(){
         nav.style.display = 'none';
     }
 }
+function navProjetos (){
+    const nav = document.querySelector("#section-start");
+    
+}
