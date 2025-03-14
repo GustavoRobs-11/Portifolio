@@ -36,7 +36,7 @@
         <section class="section-start" id="section-start">
         <div class="card-start">
             <h1 data-text="Desenvolvedor" class="dev-start">Desenvolvedor</h1>
-            <h2 data-text="Front-End" class="front-start">Front-End</h2>
+            <h2 data-text="WEB" class="front-start">WEB</h2>
             <p data-text="Localizado em São Bernardo do Campo | SP" class="localizado-start">Localizado em São Bernardo do Campo | SP</p>
         </div>
         <div class="box-eu">
@@ -142,27 +142,27 @@
             </div>
         </section>
         <section class="container-contato" id="container-contato">
-            <div class="container-title-contato">
-                <h1 class="entre-em-contato">ENTRE EM CONTATO</h1>
-            </div>
-            <div class="inputs-contato">
-                <div class="dados">
-                    <input class="inputs1" type="name" placeholder="Nome">
-                    <input class="inputs1" type="email" placeholder="gustavo.@gmail.com">
-                    <input class="inputs1" type="tel" placeholder="(11) 9 9999-9999">
-                    <input class="inputs1" type="text" placeholder="Assunto">
+            <form action="https://formsubmit.co/75812578207dba2c71cfcd21bdd65e43" method="POST">
+                <div class="container-title-contato">
+                    <h1 class="entre-em-contato">ENTRE EM CONTATO</h1>
                 </div>
-                <div class="mensagem">
-                    <input class="inputs1" type="text" placeholder="Mensagem">
+                <div class="inputs-contato">
+                    <div class="dados">
+                        <input class="inputs1" type="text" placeholder="Nome" name="Nome" required>
+                        <input class="inputs1" type="email" placeholder="gustavo.@gmail.com" name="Email" required>
+                        <input class="inputs1" type="tel" placeholder="(11) 9 9999-9999" name="Telefone" required>
+                        <input class="inputs1" type="text" placeholder="Assunto" name="Assunto" required>
+                        <input type="hidden" name="_next" value="http://127.0.0.1:5500/obrigado/obrigado.html">
+                    </div>
+                    <div class="mensagem">
+                        <input class="inputs1" type="text" placeholder="Mensagem" name="Mensagem" required>
+                    </div>
                 </div>
-            </div>
-            <div class="button-message">
-                <button class="send-message">Send Message</button>
-            </div>
+                <div class="button-message">
+                    <button class="send-message" type="submit">Send Message</button>
+                </div>
+            </form>
         </section>
-        
-
-
     </main>
     <footer class="container-footer">
         <div  class="copy-footer">

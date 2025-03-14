@@ -252,7 +252,7 @@ main{
 
 .front-start{
     position: absolute;
-    left: 9rem;
+    right: 0;
     top: 10rem;
     font-family: var(--font-family);
     color: var(--primary-color);
@@ -270,7 +270,7 @@ main{
     height: 100%;
     color: var(--details-color);
     overflow: hidden;
-    animation: digitando-front 2s steps(calc(10)) forwards, blink 200ms infinite;
+    animation: digitando-front 2s steps(calc(8)), blink 200ms infinite;
     border-right: 4px solid var(--details-color);
 }
 @keyframes digitando-front{
@@ -278,7 +278,7 @@ main{
         width: 0;
     }
     90%{
-        width: 120%;
+        width: 80%;
     }
 }
 .localizado-start{
@@ -325,7 +325,6 @@ main{
 .menu-hamburguer{
     display: none;
     cursor: pointer;
-    
 }
 .menu-hamburguer::c{
    background: red;
@@ -946,7 +945,7 @@ main{
     }
     .front-start{
         font-size: 5vw;
-        left: 6rem;
+        left: 15rem;
         top: 10rem;
     }
     .localizado-start{
@@ -982,7 +981,7 @@ main{
         font-size: 5vw;
     }
     .texto-quemsou{
-        font-size: 2.5vw;
+        font-size: 2vw;
     }
     .redes-sociais{
         width: 100%;
