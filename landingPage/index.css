@@ -239,8 +239,8 @@ main{
     height: 100%;
     color: var(--details-color);
     overflow: hidden;
-    animation: digitando-dev 2s steps(15);
-    border-right: 4px solid var(--details-color) ;
+    overflow: hidden;
+    animation: digitando-front 1s ease-in;
 }
 @keyframes digitando-dev{
     from{
