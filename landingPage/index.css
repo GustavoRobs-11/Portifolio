@@ -1,7 +1,7 @@
 :root{
-    --primary-color: #ffffff;
-    --secondary-color:#004b96 ;
-    --details-color: #470073;
+    --primary-color: #000000;
+    --secondary-color:#111063 ;
+    --details-color: #28dddd;
     --font-family: "Poppins", serif;
 }
 body{
@@ -14,7 +14,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding-top: 10px;
-    background-color: var(--secondary-color);
+    background-color: var(--details-color);
     padding-bottom: 10px;
     border-bottom: 0.3rem solid var(--primary-color);
     padding-left: 4rem;
@@ -28,7 +28,7 @@ header{
 }
 .header-name{
     position: relative;
-    color: var(--secondary-color);
+    color: var(--details-color);
     -webkit-text-stroke: 0.5px var(--primary-color);
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -43,7 +43,7 @@ header{
     width: 100%;
     height: 100%;
     color: var(--primary-color);
-    -webkit-text-stroke: 0.5px var(--secondary-color);
+    -webkit-text-stroke: 0.5px var(--details-color);
     border-bottom: 0.2rem solid var(--primary-color);
     overflow: hidden;
     animation: animation 4s ease-in-out infinite;
@@ -126,20 +126,26 @@ main{
 .logo-github{
     width: 5%;
     animation: logo 5000ms infinite;
-    filter: drop-shadow(0 0 10px var(--primary-color));
+    background: var(--details-color);
+    padding: 1rem;
+    border-radius: 1rem;
 }
 .logo-github:hover{
     translate: 0 -1rem;
+    scale: 1.1;
     cursor: pointer;
     transition: 500ms;
 }
 .logo-linkedin{
     width: 5%;
     animation: logo 5000ms infinite;
-    filter: drop-shadow(0 0 10px var(--primary-color));
+    background: var(--details-color);
+    padding: 1rem;
+    border-radius: 1rem;
 }
 .logo-linkedin:hover{
     translate: 0 -1rem;
+    scale: 1.1;
     cursor: pointer;
     transition: 500ms;
 }
@@ -148,8 +154,8 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(var(--primary-color), var(--details-color)) ;
-    color: var(-);
+    background: linear-gradient(var(--primary-color)) ;
+    color: var(--details-color);
     padding-inline: 5%;
     padding-block: 5%;
 }
@@ -174,9 +180,9 @@ main{
 .box-eu::after{
     content: '';
     position: absolute;
-    background: linear-gradient(3deg, rgba(0, 0, 248, 0),rgba(0, 0, 248, 0), var(--secondary-color));
+    background: linear-gradient(3deg, rgba(0, 0, 248, 0),rgba(0, 0, 248, 0), var(--details-color));
     border-radius: 50%;
-    width: calc(35% + 1rem);
+    width: calc(100% + 1rem);
     height: calc(100% + 1rem);
     z-index: -1;
     animation: bordas 1s ease-in-out infinite;
@@ -187,7 +193,7 @@ main{
 .box-eu:hover:after{
     content: '';
     position: absolute;
-    background: linear-gradient(3deg, rgba(0, 0, 248, 0),rgba(0, 0, 248, 0),var(--details-color));
+    background: linear-gradient(3deg, rgba(0, 0, 248, 0),rgba(0, 0, 248, 0),var(--secondary-color));
     border-radius: 50%;
     width: calc(35% + 1rem);
     height: calc(100% + 1rem);
@@ -333,6 +339,7 @@ main{
 
 .tittle-quemsou{
     font-size: 3vw;
+    color: var(--details-color);
 }
 .texto-quemsou{
     font-size: 1.5rem;
@@ -343,7 +350,7 @@ main{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(var(--details-color), var(--secondary-color), var(--details-color));
+    background: var(--primary-color);
     padding: 20px;
     color: var(--primary-color);
     font-size: 30px;
@@ -352,6 +359,9 @@ main{
 .cards-container, h1{
     display: flex;
     justify-content: center;
+    color: var(--details-color);
+    font-size: 4rem;
+    font-weight: bold;
 }
 .projetos{
     position: relative;
@@ -364,7 +374,7 @@ main{
 }
 .card{
     position: relative;
-    border:  0.3rem solid var(--primary-color);
+    border:  0.3rem solid var(--details-color);
     display: flex;
     border-radius: 25px;
     flex-direction: column;
@@ -375,16 +385,15 @@ main{
 .card-tittle{
     justify-content: center;
     display: flex;
-    font-size: 1.5rem;
-    border-bottom: 5px solid var(--primary-color);
+    font-size: 2.5rem;
+    border-bottom: 5px solid var(--details-color);
     padding: 1vw;
-    
 }
 .card-img{
     position: relative;
     object-fit: cover;
     border-radius: 25px;
-    border: 0.2rem solid black;
+    border: 0.2rem solid var(--details-color);
     width: 20rem;
 }
 .card-language{
@@ -396,8 +405,8 @@ main{
 }
 .language{
     display: flex;
-    border-bottom: 5px solid var(--primary-color);
-    color: var(--primary-color);
+    border-bottom: 5px solid var(--details-color);
+    color: var(--details-color);
 }
 .card-button{
     display: flex;
@@ -416,20 +425,20 @@ main{
 }
 .button-projetos{
     padding: 10px;
-    background-color: rgba(0, 0, 255, 0);
-    border: 3px solid var(--primary-color);
+    background-color:var(--primary-color);
+    border: 3px solid var(--details-color);
     border-radius: 15px;
-    color:var(--primary-color) ;
+    color:var(--details-color) ;
     font-family:var(--font-family);
     font-size: 30px;
     font-weight: bold;
 }
 .button-projetos:hover{
-    background-color: var(--primary-color);
+    background-color: var(--details-color);
     cursor: pointer;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     scale: 1.1;
-    border:3px solid var(--secondary-color) ;
+    border:3px solid var(--details-color) ;
     transition: 500ms;
 }
 .btn-avancar{
@@ -471,7 +480,7 @@ main{
 }
 .container-contato{
     display: flex;
-    background: linear-gradient(black, var(--secondary-color));
+    background: var(--primary-color);
     justify-content: space-evenly;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -480,7 +489,7 @@ main{
     padding-bottom: 3rem;
 }
 .entre-em-contato{
-    color: var(--primary-color);
+    color: var(--details-color);
     font-size: 3rem;
 }
 .inputs-contato{
@@ -510,10 +519,10 @@ main{
     border-radius: 1rem;
     background: none;
     padding: 0.6rem;
-    color: var(--primary-color);
+    color: var(--details-color);
     font-weight: bold;
     width: 100%;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--details-color);
     font-size: 2vw;
 
 }
@@ -522,7 +531,7 @@ main{
     border-radius: 1rem;
     background: none;
     padding: 0.6rem;
-    color: var(--primary-color);
+    color: var(--details-color);
     font-weight: bold;
     font-size: 2vh;
     display: flex;
@@ -532,25 +541,25 @@ main{
 .send-message{
     padding: 10px;
     background-color: rgba(0, 0, 255, 0);
-    border: 3px solid var(--primary-color);
+    border: 3px solid var(--details-color);
     border-radius: 15px;
-    color:var(--primary-color) ;
+    color:var(--details-color) ;
     font-family:var(--font-family);
     font-size: 30px;
     font-weight: bold;
 }
 .send-message:hover{
-    background-color: var(--primary-color);
+    background-color: var(--details-color);
     cursor: pointer;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     scale: 1.1;
-    border:3px solid var(--secondary-color) ;
+    border:3px solid var(--primary-color) ;
     transition: 500ms;
 }
 .container-skills{
     display: flex;
     flex-direction: column;
-    background: linear-gradient(var(--details-color), black);
+    background:  var(--font-family);
     padding: 1rem;
     justify-content: center;
     align-items: center;
@@ -558,8 +567,8 @@ main{
 .tittle-container-skills{
     padding: 1rem;
     font-size: 4rem;
-    color: var(--primary-color);
-    border-bottom: 3px solid var(--primary-color);
+    color: var(--details-color);
+    border-bottom: 3px solid var(--details-color);
     width: max-content;
 }
 .skills{
@@ -573,11 +582,11 @@ main{
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    background: var(--primary-color);
+    background: linear-gradient(var(--details-color), var(--secondary-color));
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--details-color);
     border-radius: 1rem;
     transition: 500ms;
 }
@@ -589,7 +598,7 @@ main{
 }*/
 
 .card-tittle-skills{
-    color: var(--details-color);
+    color: var(--primary-color);
 }
 .card-img-skills{
     display: flex;
@@ -613,22 +622,26 @@ main{
 }
 .container-footer{
     padding-top: 2rem;
-    background: rgb(255, 255, 255);
 }
 .copy-footer{
-    background: var(--primary-color);
+    background: var(--details-color);
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 .copy-footer p{
     font-family: var(--font-family);
-    color: black;
+    color: var(--primary-color);
     font-size: 1rem;
     font-weight: bold;
+    border-bottom: solid 1px var(--primary-color);
+    padding-inline: 10rem;
+    
 }
 .links-footer{
-    background: var(--primary-color);
+    background: var(--details-color);
     padding-top:1rem ;
     padding-bottom: 1rem;
     display: flex;
@@ -957,24 +970,25 @@ main{
         padding-inline: 0.5rem;
     }
     .box-eu{
-        align-content: center;  
+        align-content: center;
     }
     .box-eu:hover:before,
     .box-eu:hover:after{
-        width: calc(80% + 0.2rem);
-        height: calc(100% + 0.2rem);
+        width: 80%;
         right: 0;
+        top: 0;
     }
     .box-eu::before,
     .box-eu::after{
-        width: calc(80% + 0.2rem);
-        height: calc(100% + 0.2rem);
+        width: 80%;
         right: 0;
+        top: 0;
     }
     .foto-eu{
         width: 80%;
         right: 0;
-        top: 15%;
+        top: 0;
+        right: 0;
     }
     .container-quemsou{
         padding-top: 8rem;
