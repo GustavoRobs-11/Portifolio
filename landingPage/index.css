@@ -678,7 +678,7 @@ main{
         left: 0;
         height: max-content;
         padding: 1rem;
-        background-color: var(--secondary-color);
+        background-color: var(--details-color);
         transition: 500ms;
     }
     .header-menu-responsive li{
