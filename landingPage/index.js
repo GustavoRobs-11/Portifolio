@@ -43,7 +43,23 @@ function toggleMenu(){
         nav.style.display = 'none';
     }
 }
-function navProjetos (){
-    const nav = document.querySelector("#section-start");
-    
-}
+
+// Captura todos os links da navbar
+const links = document.querySelectorAll('.header-menu a, .header-menu-responsive a, .links-footer a ');
+
+// Adiciona um evento de clique para cada link
+links.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); // Evita o comportamento padrão
+
+        // Obtém o destino da rolagem
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        // Rola suavemente até a seção
+        targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+});

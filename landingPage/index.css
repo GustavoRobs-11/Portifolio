@@ -83,7 +83,6 @@ header{
     border-bottom: 1.3px solid var(--primary-color);
 }
 
-
 main{
     display: flex;
     padding-top: 5%;
@@ -321,20 +320,18 @@ main{
     transition: 0.3s ease;
 }
 .change .bar1{
-    transform: translate(0, 0.65rem) rotate(-45deg);
+    transform: rotate(-45deg) translateY(0.6rem);
+    
 }
 .change .bar2{
-    opacity: 0;
+    display: none;
 }
 .change .bar3{
-    transform: translate(0, -0.65rem) rotate(45deg);
+    transform: rotate(45deg) translateY(-0.6rem);;
 }
 .menu-hamburguer{
     display: none;
     cursor: pointer;
-}
-.menu-hamburguer::c{
-   background: red;
 }
 
 .tittle-quemsou{
@@ -658,7 +655,10 @@ main{
 /* extra small smartphone */
 @media (min-width: 0px){
     .menu-hamburguer{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
     .header-menu{
         display: none;
@@ -671,6 +671,7 @@ main{
         left: 0.5rem;
         font-size: 1rem;
     }
+    
     .header-menu-responsive{
         display: none;
         position: absolute;
@@ -679,20 +680,21 @@ main{
         height: max-content;
         padding: 1rem;
         background-color: var(--details-color);
-        transition: 500ms;
+
     }
+    
     .header-menu-responsive li{
-        text-decoration: none;
         list-style: none;
     }
     .header-menu-responsive li a{
         display: flex;
         color:var(--primary-color);
         font-family: var(--font-family);
-        font-size: 0.5rem;
+        font-size: 1rem;
         font-weight: bold;
         transition: 500ms;
-        padding: 0.3rem;
+        padding: 0.1rem;
+        text-decoration: none;
     }
     .header-menu-responsive li a:hover{
         translate: 0 -0.3rem;
