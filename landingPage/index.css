@@ -247,14 +247,6 @@ main{
     overflow: hidden;
     animation: digitando-front 1s ease-in;
 }
-@keyframes digitando-dev{
-    from{
-        width: 0px;
-    }
-    to{
-        width: 100%;
-    }
-}
 
 .front-start{
     position: absolute;
@@ -351,7 +343,12 @@ main{
     padding: 20px;
     color: var(--primary-color);
     font-size: 30px;
-    
+}
+.projetos-whapper{
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px; /* Ajuste conforme necessário */
+    margin: auto;
 }
 .cards-container, h1{
     display: flex;
@@ -361,13 +358,16 @@ main{
     font-weight: bold;
 }
 .projetos{
-    position: relative;
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+    justify-content: center;
+}
+.projetos-wrapper {
     overflow: hidden;
     width: 100%;
+    max-width: 90%; /* Ajuste conforme necessário */
+    margin: auto;
 }
 .card{
     position: relative;
@@ -377,7 +377,8 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0.5rem;
+    flex: 0 0 48%;
 }
 .card-tittle{
     justify-content: center;
@@ -416,8 +417,10 @@ main{
 }
 .button-slide{
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     padding: 1rem;
+    width: 70%;
+    margin: auto;
 
 }
 .button-projetos{
@@ -441,38 +444,38 @@ main{
 .btn-avancar{
     padding: 10px;
     background-color: rgba(0, 0, 255, 0);
-    border: 3px solid var(--primary-color);
+    border: 3px solid var(--details-color);
     border-radius: 15px;
-    color:var(--primary-color) ;
+    color: var(--details-color);
     font-family:var(--font-family);
     font-size: 30px;
     font-weight: bold;
 }
 .btn-avancar:hover{
-    background-color: var(--primary-color);
+    background-color: var(--details-color);
     cursor: pointer;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     scale: 1.1;
-    border:3px solid var(--secondary-color) ;
+    border:3px solid var(--primary-color) ;
     transition: 500ms;
 }
 
 .btn-voltar{
     padding: 10px;
     background-color: rgba(0, 0, 255, 0);
-    border: 3px solid var(--primary-color);
+    border: 3px solid var(--details-color);
     border-radius: 15px;
-    color:var(--primary-color) ;
+    color: var(--details-color);
     font-family:var(--font-family);
     font-size: 30px;
     font-weight: bold;
 }
 .btn-voltar:hover{
-    background-color: var(--primary-color);
+    background-color: var(--details-color);
     cursor: pointer;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     scale: 1.1;
-    border:3px solid var(--secondary-color) ;
+    border:3px solid var(--primary-color) ;
     transition: 500ms;
 }
 .container-contato{
@@ -764,8 +767,15 @@ main{
     .cards-container{
         text-align: center;
     }
+    .projetos-whapper{
+        max-width: 90%;
+    }
+    .projetos{
+        justify-content: start;
+    }
     .card{
-        padding: 0;
+        padding-inline: 3%;
+        width: 300px;
     }
     .card-img{
         width: 80%;
@@ -775,6 +785,7 @@ main{
     }
     .card-language{
         font-size: 6vw;
+        flex-wrap: nowrap;
     }
     .skills{
         gap: 1rem;

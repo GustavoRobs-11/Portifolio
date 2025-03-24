@@ -63,3 +63,44 @@ links.forEach(link => {
         });
     });
 });
+
+let index = 0;
+const cards = document.querySelectorAll(".card");
+const totalCards = cards.length;
+const Voltar = document.querySelector('.btn-voltar');
+
+function getCardsPerPage() {
+    return window.innerWidth <= 600 ? 1 : 2; // 1 card por vez em telas pequenas, 2 em telas grandes
+}
+
+function updateCards() {
+    const cardsPerPage = getCardsPerPage();
+    const offset = -index * (100 / cardsPerPage); // Move proporcionalmente ao número de cards visíveis
+    document.querySelector(".projetos").style.transform = `translateX(${offset}%)`;
+    if(index == 0){
+        Voltar.style.oppacity ='0';
+    }
+}
+
+function nextCards() {
+    const cardsPerPage = getCardsPerPage();
+    if (index < totalCards - cardsPerPage) {
+        index++;
+        updateCards();
+    }
+}
+
+function prevCards() {
+    if (index > 0) {
+        index--;
+        updateCards();
+    }
+}
+
+// Ajusta a posição ao redimensionar a tela
+window.addEventListener("resize", () => {
+    index = 0; // Reinicia para evitar bugs de largura diferente
+    updateCards();
+});
+
+updateCards();

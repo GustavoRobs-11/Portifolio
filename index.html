@@ -54,65 +54,68 @@
         </div>
         <section class="cards-container" id="cards-container">
             <h1>MEUS PROJETOS</h1>
-            <div class="projetos">
-                <div class="card">
-                     <h1 class="card-tittle">Calculadora</h1>
-                    <img src="/imgs/foto-calculadora.png" class="card-img">
-                    <div class="card-language">
-                        <h4 class="language">HTML</h4>
-                        <h4 class="language">CSS</h4>
-                        <h4 class="language">JavaScript</h4>
+            <div class="projetos-wrapper">
+                <div class="projetos">
+                    <div class="card">
+                        <h1 class="card-tittle">Calculadora</h1>
+                        <img src="/imgs/foto-calculadora.png" class="card-img">
+                        <div class="card-language">
+                            <h4 class="language">HTML</h4>
+                            <h4 class="language">CSS</h4>
+                            <h4 class="language">JavaScript</h4>
+                        </div>
+                        <div class="card-button">
+                            <button class="button-projetos" onclick="codeCalculadora()">Code</button>
+                            <button onclick="calculadora()" class="button-projetos">Calculadora</button>
+                        </div>
                     </div>
-                    <div class="card-button">
-                        <button class="button-projetos" onclick="codeCalculadora()">Code</button>
-                        <button onclick="calculadora()" class="button-projetos">Calculadora</button>
+                    <div class="card">
+                        <h1 class="card-tittle">Jogo do Mario</h1>
+                        <img src="/imgs/foto-jogoMario.png" class="card-img">
+                        <div class="card-language">
+                            <h4 class="language">HTML</h4>
+                            <h4 class="language">CSS</h4>
+                            <h4 class="language">JavaScript</h4>
+                        </div>
+                        <div class="card-button">
+                            <button class="button-projetos" onclick="codeMario()">Code</button>
+                            <button onclick="mario()" class="button-projetos">Jogo do Mário</button>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <h1 class="card-tittle">Jogo do Mario</h1>
-                   <img src="/imgs/foto-jogoMario.png" class="card-img">
-                   <div class="card-language">
-                       <h4 class="language">HTML</h4>
-                       <h4 class="language">CSS</h4>
-                       <h4 class="language">JavaScript</h4>
-                   </div>
-                   <div class="card-button">
-                       <button class="button-projetos" onclick="codeMario()">Code</button>
-                       <button onclick="mario()" class="button-projetos">Jogo do Mário</button>
-                   </div>
-                </div>
-                <div class="card">
-                    <h1 class="card-tittle">Mind</h1>
-                   <img src="/imgs/foto-Mind.png" class="card-img">
-                   <div class="card-language">
-                       <h4 class="language">HTML</h4>
-                       <h4 class="language">CSS</h4>
-                       <h4 class="language">JavaScript</h4>
-                   </div>
-                   <div class="card-button">
-                       <button class="button-projetos" onclick="codeMind()">Code</button>
-                       <button class="button-projetos" onclick="mind()">Mind</button>
-                   </div>
-                </div>
-                <div class="card">
-                    <h1 class="card-tittle">My Tube</h1>
-                   <img src="/imgs/foto-Mytube.png" class="card-img">
-                   <div class="card-language">
-                       <h4 class="language">HTML</h4>
-                       <h4 class="language">CSS</h4>
-                       <h4 class="language">JavaScript</h4>
-                   </div>
-                   <div class="card-button">
-                       <button class="button-projetos" onclick="CodeMytube()">Code</button>
-                       <button class="button-projetos" onclick="Mytube()">Mytube</button>
-                   </div>
+                    <div class="card">
+                        <h1 class="card-tittle">Mind</h1>
+                        <img src="/imgs/foto-Mind.png" class="card-img">
+                        <div class="card-language">
+                            <h4 class="language">HTML</h4>
+                            <h4 class="language">CSS</h4>
+                            <h4 class="language">JavaScript</h4>
+                        </div>
+                        <div class="card-button">
+                            <button class="button-projetos" onclick="codeMind()">Code</button>
+                            <button class="button-projetos" onclick="mind()">Mind</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h1 class="card-tittle">My Tube</h1>
+                        <img src="/imgs/foto-Mytube.png" class="card-img">
+                        <div class="card-language">
+                            <h4 class="language">HTML</h4>
+                            <h4 class="language">CSS</h4>
+                            <h4 class="language">JavaScript</h4>
+                        </div>
+                        <div class="card-button">
+                            <button class="button-projetos" onclick="CodeMytube()">Code</button>
+                            <button class="button-projetos" onclick="Mytube()">Mytube</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="button-slide">
-                <!-- <button class="btn-voltar" style="display: none;">voltar</button> -->
-                <button class="btn-avancar" onclick="nextBtn()">proximo</button>
+                <button class="btn-voltar" onclick="prevCards()">Voltar</button>
+                <button class="btn-avancar" onclick="nextCards()">Próximo</button>
             </div>
         </section>
+        
         <section class="container-skills" id="container-skills">
             <h1 class="tittle-container-skills">SKILLS</h1>
             <div class="skills">
