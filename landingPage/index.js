@@ -68,17 +68,24 @@ let index = 0;
 const cards = document.querySelectorAll(".card");
 const totalCards = cards.length;
 const Voltar = document.querySelector('.btn-voltar');
+const Avancar = document.querySelector('.btn-avancar');
 
+function getCardWidth(){
+    return cards[0].clientWidth + 25;
+}
 function getCardsPerPage() {
     return window.innerWidth <= 600 ? 1 : 2; // 1 card por vez em telas pequenas, 2 em telas grandes
 }
 
 function updateCards() {
+    const CardWidth = getCardWidth();
     const cardsPerPage = getCardsPerPage();
-    const offset = -index * (100 / cardsPerPage); // Move proporcionalmente ao número de cards visíveis
-    document.querySelector(".projetos").style.transform = `translateX(${offset}%)`;
+    const offset = -index * CardWidth; // Move proporcionalmente ao número de cards visíveis
+    document.querySelector(".projetos").style.transform = `translateX(${offset}px)`;
     if(index == 0){
-        Voltar.style.oppacity ='0';
+        Voltar.style.opacity ='0';
+    }else{
+        Voltar.style.opacity = 1
     }
 }
 
